@@ -4,7 +4,7 @@ Websocket Packet Tracer Application
 This repository contains a Websocket application for tracing IPv4 and IPv6 packets, as well as monitoring the amount of packets received. The application is containerized using Docker and can be deployed to Azure Kubernetes Service (AKS) using GitHub Actions CI/CD pipeline.
 
 ## Overview
-This project automates the provisioning and deployment of infrastructure and applications to Azure Kubernetes Service (AKS) using GitHub Actions. It provides a streamlined workflow for managing cloud resources and deploying containerized applications on Kubernetes.
+This project automates the provisioning and deployment of infrastructure and applications to Azure Kubernetes Service (AKS) using GitHub Actions. It provides a streamlined workflow for dockerizing and deploying containerized applications on Kubernetes.
 
 ## Prerequisites
 Before using this project, ensure you have the following:
@@ -36,5 +36,4 @@ Configure the following GitHub Secrets to use the workflows:
 - `ACR_PASSWORD`: Azure Container Registry password.
 - `AZURE_CREDENTIALS`: Azure credentials in JSON format for AKS authentication.
 
-### Workflow Usage
-To use the workflows, simply push changes to your `main` branch or create a pull request. The workflows will handle Terraform operations and the deployment process automatically.
+

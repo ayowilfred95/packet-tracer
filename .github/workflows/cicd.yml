@@ -42,4 +42,4 @@ jobs:
         resource-group: aks-getting-started
 
     - name: Deploy to AKS
-      run: kubectl apply -f ./deployment
+      run: kubectl apply -f ./deployment.yml

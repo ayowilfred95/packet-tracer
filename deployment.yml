@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flightbookingsystemsample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flightbookingsystemsample
+  template:
+    metadata:
+      labels:
+        app: flightbookingsystemsample
+    spec:
+      containers:
+      - name: flightbookingsystemsample
+        image: flightbookingsystemregistry.azurecr.io/flightbookingsystemsample
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: "1"
+            memory: "1Gi"
+          limits:
+            cpu: "2"
+            memory: "2Gi"
+        ports:
+        - containerPort: 55455
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flightbookingsystemsample
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 55455
+    targetPort: 55455
+  selector:
+    app: flightbookingsystemsample
+
